@@ -1,6 +1,6 @@
 # Hello World Helm
 
-###### Create a kubernetes service with three pods via a helm chart and expose the service with ingress
+##### Create a kubernetes service with three pods via a helm chart and expose the service with ingress
 
 --- 
 
