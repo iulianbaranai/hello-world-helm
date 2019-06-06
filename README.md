@@ -10,14 +10,16 @@ Deploy the service and ingress
 
     $ helm install hello-world-helm/ 
 
-Check the installed chart
+Check the installed chart - should be in DEPLOYED state
 
     $ helm list 
 
-Check the service and ingress
+Check the created resources
 
-    $ kubectl get services
     $ kubectl get pods
+    $ kubectl get replicaset
+    $ kubectl get deployments
+    $ kubectl get services
     $ kubectl describe ingress 
 
 Enable Ingress addon
@@ -28,8 +30,10 @@ Find out the minikube IP
 
     $ echo "$(minikube ip)"
 
-Access the services from the cluster via a browser
+Access the cluster service via a browser - "Welcome to nginx!" default page should appear
 
     https://[minikube IP]
-    
-The nginx default page, "Welcome to nginx!", should appear
+
+Cleanup the cluster
+
+    $ helm delete $(helm list | grep DEPLOYED | cut -f1)
