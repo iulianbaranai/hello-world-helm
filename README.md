@@ -1,6 +1,10 @@
 # Hello World Helm
 
-## Run on local cluster (minikube)
+###### Create a kubernetes service with three pods via a helm chart and expose the service with ingress
+
+--- 
+
+### Install chart on local minikube cluster
 
 Deploy the service and ingress
 
