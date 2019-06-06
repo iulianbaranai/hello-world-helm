@@ -25,6 +25,7 @@ Check the created resources
     $ kubectl get replicaset
     $ kubectl get deployments
     $ kubectl get services
+    $ kubectl get all # displays the above four resources at once
     $ kubectl describe ingress 
 
 Enable Ingress addon
