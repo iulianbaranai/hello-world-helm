@@ -1,0 +1,4 @@
+# Maintains the ignored files for Git repository.
+
+.idea/
+hello-world-helm.iml
