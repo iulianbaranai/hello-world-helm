@@ -6,6 +6,11 @@
 
 ### Install chart on local minikube cluster
 
+Prerequisites
+
+* Make sure you have a local cluster: https://kubernetes.io/docs/setup/minikube
+* Make sure helm is installed: https://github.com/helm/helm/blob/master/docs/install.md
+
 Deploy the service and ingress
 
     $ helm install hello-world-helm/ 
@@ -34,6 +39,6 @@ Access the cluster service via a browser - "Welcome to nginx!" default page shou
 
     https://[minikube IP]
 
-Cleanup the cluster
+Cleanup the cluster by uninstalling the release
 
     $ helm delete $(helm list | grep DEPLOYED | cut -f1)
