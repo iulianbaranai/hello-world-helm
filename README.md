@@ -11,9 +11,13 @@ Prerequisites
 * Make sure you have a local cluster: https://kubernetes.io/docs/setup/minikube
 * Make sure helm is installed: https://github.com/helm/helm/blob/master/docs/install.md
 
-Deploy the service and ingress
+Clone this repository
 
-    $ helm install hello-world-helm/ 
+    $ https://github.com/iulianbaranai/hello-world-helm.git
+
+Navigate to the directory and install the chart
+
+    $ helm install ./
 
 Check the installed chart - should be in DEPLOYED state
 
