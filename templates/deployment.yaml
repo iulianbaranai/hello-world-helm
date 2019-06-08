@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
-  replicas: 3
+  replicas: {{.Values.scale}} # see values.yaml file
   template:
       metadata:
         labels:
@@ -11,6 +11,6 @@ spec:
       spec:
         containers:
           - name: nginx-container
-            image: nginx:1.13
+            image: nginx:{{.Values.tag}} # see values.yaml file
             ports:
               - containerPort: 80
