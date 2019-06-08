@@ -44,6 +44,42 @@ Access the cluster service via a browser - "Welcome to nginx!" default page shou
 
     https://[minikube IP]
 
-Cleanup the cluster by uninstalling the release
+### Update values and upgrade helm installation
 
+Check the current version of nginx installed on pods
+
+    k exec [pod-name] -- nginx -v
+
+Update the values.yaml file
+
+    scale: 10
+    tag: "1.13"
+
+Upgrade to new version
+
+    # helm upgrade [helm-release-name] [chart-location]
+    $ helm upgrade $(helm list | grep DEPLOYED | cut -f1) ./
+
+Check the helm revision, pods number, current version of nginx installed on pods
+
+    $ helm list # see REVISION on DEPLOYED chart
+    $ kubectl get pods
+    $ kubectl exec [pod-name] -- nginx -v
+
+### Rollback to previous version
+
+    # helm rollback [helm-release-name] [helm-release-revision]
+    $ helm rollback $(helm list | grep DEPLOYED | cut -f1) 1
+
+Check the helm revision, pods number, current version of nginx installed on pods
+
+    $ helm list # see REVISION on DEPLOYED chart
+    $ kubectl get pods
+    $ kubectl exec [pod-name] -- nginx -v
+
+### Cleanup the cluster
+
+Uninstall the deployed release
+
+    # helm delete [helm-release-name]
     $ helm delete $(helm list | grep DEPLOYED | cut -f1)
