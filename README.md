@@ -1,7 +1,7 @@
 # Hello World Helm
 
 ##### Helm is a tool for Kubernetes that helps installing and managing applications. 
-Create a kubernetes service with three pods via a helm chart and expose the service with ingress.
+##### Create a kubernetes service with three pods via a helm chart and expose the service with ingress.
 
 --- 
 
