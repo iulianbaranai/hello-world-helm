@@ -49,7 +49,7 @@ Access the cluster service via a browser - "Welcome to nginx!" default page shou
 
 Check the current version of nginx installed on pods
 
-    k exec [pod-name] -- nginx -v
+    kubectl exec [pod-name] -- nginx -v
 
 Update the values.yaml file
 

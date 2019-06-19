@@ -1,10 +1,10 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: nginx-ingress
+  name: app-ingress
   annotations:
     http.port: "443"
 spec:
   backend:
-    serviceName: nginx-service
+    serviceName: app-service
     servicePort: 80

@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: app-deployment
 spec:
   replicas: {{.Values.scale}} # see values.yaml file
   template:
       metadata:
         labels:
-          app: nginx-app-selector
+          app: app-pod-selector
       spec:
         containers:
-          - name: nginx-container
+          - name: app-pod-container
             image: nginx:{{.Values.tag}} # see values.yaml file
             ports:
               - containerPort: 80

@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: nginx-service
+  name: app-service
 spec:
   type: ClusterIP
   ports:
@@ -10,4 +10,4 @@ spec:
       port: 80
       targetPort: 80
   selector:
-    app: nginx-app-selector
+    app: app-pod-selector
