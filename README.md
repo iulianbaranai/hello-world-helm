@@ -16,6 +16,11 @@ Clone this repository
 
     $ https://github.com/iulianbaranai/hello-world-helm.git
 
+Enable Ingress and Dashboards addons
+
+    $ minikube addons enable ingress
+    $ minikube addons enable dashboard
+
 Navigate to the directory and install the chart
 
     $ helm install ./
@@ -31,12 +36,9 @@ Check the created resources
     $ kubectl get deployments
     $ kubectl get services
     $ kubectl get all # displays the above four resources at once
-    $ kubectl describe ingress 
+    $ kubectl describe ingress
+    $ minikube dashboard # see the created resources from the browser through the kubernetes dashboard
 
-Enable Ingress addon
-
-    $ minikube addons enable ingress
-    
 Find out the minikube IP
 
     $ echo "$(minikube ip)"
