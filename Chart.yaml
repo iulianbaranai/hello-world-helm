@@ -1,4 +1,4 @@
-name: Hello World Helm Chart
+name: hello_world_helm_chart
 version: 1.1.0
 description: First Helm Chart
 maintainers:
